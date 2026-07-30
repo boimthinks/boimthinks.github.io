@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boim · Portofolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="public/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="public/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="avatar">
+          <img src="public/icon.svg" alt="Avatar Boim" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+        </div>
+        <h1 class="name">Boim</h1>
+        <span class="username">boimthinks</span>
+        <button class="btn-follow">
+          <i class="fa-regular fa-user"></i> Ikuti
+        </button>
+        <p class="bio">Software developer yang suka belajar hal baru dan berbagi catatan coding.</p>
+
+        <div class="meta">
+          <span><i class="fa-solid fa-location-dot"></i> Palembang, Indonesia</span>
+          <span><i class="fa-regular fa-envelope"></i> boim.koe@gmail.com</span>
+          <a href="https://github.com/boimthinks" target="_blank">
+            <i class="fa-brands fa-github"></i> github.com/boimthinks
+          </a>
+        </div>
+
+        <div class="stats">
+          <div><strong>12</strong> <span>pengikut</span></div>
+          <div><strong>8</strong> <span>mengikuti</span></div>
+          <div><strong>23</strong> <span>bintang</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <nav class="tabs">
+        <button class="tab active" data-tab="overview">
+          <i class="fa-solid fa-book"></i> Overview
+        </button>
+        <button class="tab" data-tab="repositori">
+          <i class="fa-regular fa-folder"></i> Repositori
+        </button>
+        <button class="tab" data-tab="skills">
+          <i class="fa-solid fa-code"></i> Skills
+        </button>
+      </nav>
+
+      <div class="content">
+        <!-- TAB: OVERVIEW -->
+        <section id="overview" class="tab-content active">
+          <div class="card">
+            <h2>Tentang Saya</h2>
+            <p>
+              Halo! Saya Boim, seorang pengembang perangkat lunak yang tertarik dengan
+              pengembangan web, backend, dan ekosistem open-source. Situs ini adalah
+              tempat saya mendokumentasikan perjalanan belajar sekaligus portofolio
+              proyek-proyek yang pernah saya kerjakan.
+            </p>
+          </div>
+
+          <div class="card">
+            <h2>Kontribusi Terakhir</h2>
+            <div class="contrib-graph" id="contribGraph"></div>
+            <p class="contrib-note">
+              <span class="legend">
+                <span>Kurang</span>
+                <span class="cell l0"></span>
+                <span class="cell l1"></span>
+                <span class="cell l2"></span>
+                <span class="cell l3"></span>
+                <span class="cell l4"></span>
+                <span>Lebih</span>
+              </span>
+            </p>
+          </div>
+        </section>
+
+        <!-- TAB: REPOSITORI -->
+        <section id="repositori" class="tab-content">
+          <div class="repo-grid" id="repoGrid"></div>
+        </section>
+
+        <!-- TAB: SKILLS -->
+        <section id="skills" class="tab-content">
+          <div class="card">
+            <h2>Keahlian</h2>
+            <div class="skill-group">
+              <h3>Frontend</h3>
+              <div class="skill-tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                <span>React</span><span>Next.js</span><span>Tailwind CSS</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h3>Backend</h3>
+              <div class="skill-tags">
+                <span>Node.js</span><span>Go</span><span>Python</span>
+                <span>Express</span><span>PostgreSQL</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h3>Tools & Lainnya</h3>
+              <div class="skill-tags">
+                <span>Git</span><span>Docker</span><span>Linux</span>
+                <span>VS Code</span><span>Figma</span><span>CI/CD</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <span>&copy; 2026 Boim — dibangun dengan <i class="fa-solid fa-heart"></i> dan kode murni</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
