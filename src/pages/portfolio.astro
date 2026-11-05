@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../data/projects';
+---
+
+<BaseLayout
+  title="Portofolio Website · Boim"
+  description="Koleksi proyek website produksi yang dibangun dengan Astro JS: mulai dari manufaktur industri, travel booking, hingga interior komersial."
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-20">
+    <!-- Header -->
+    <div class="mb-12 border-b border-slate-800/80 pb-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-mono mb-4">
+        <span>PRODUCTION SHOWCASE</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+        Portofolio Proyek Website
+      </h1>
+      <p class="text-slate-400 mt-3 text-sm sm:text-base leading-relaxed max-w-2xl">
+        Seluruh website di bawah ini adalah platform produksi aktif dengan fokus pada arsitektur Astro JS, kecepatan loading ekstrim, optimasi SEO Semantik berbobot (Schema.org), dan konversi bisnis nyata.
+      </p>
+
+      <!-- Stats Bar -->
+      <div class="mt-6 flex flex-wrap items-center gap-6 text-xs font-mono text-slate-400">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          <span class="text-slate-200 font-bold">8 Proyek</span> Ditampilkan
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-cyan-400 text-sm">bolt</span>
+          <span>100% Menggunakan Astro JS</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-amber-400 text-sm">photo_camera</span>
+          <span>Screenshot Homepage Riil</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+      {projects.map((project) => (
+        <ProjectCard project={project} />
+      ))}
+    </div>
+
+    <!-- Bottom note -->
+    <div class="mt-16 p-6 rounded-2xl bg-slate-900/40 border border-slate-800/80 text-center font-mono text-xs text-slate-400">
+      <p>Seluruh proyek di atas dikembangkan dan dioptimasi menggunakan ekosistem Astro + OpenCode AI Agent.</p>
+    </div>
+  </div>
+</BaseLayout>

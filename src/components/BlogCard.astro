@@ -1,0 +1,66 @@
+---
+interface Props {
+  post: {
+    id: string;
+    data: {
+      title: string;
+      description: string;
+      publishDate: Date;
+      author: string;
+      category: string;
+      tags: string[];
+      featured?: boolean;
+    };
+  };
+}
+
+const { post } = Astro.props;
+
+const formattedDate = new Intl.DateTimeFormat('id-ID', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+}).format(post.data.publishDate);
+---
+
+<article class="glow-card group bg-slate-900/40 border border-slate-800/80 rounded-xl p-5 hover:border-cyan-500/40 transition-all duration-300 flex flex-col justify-between">
+  <div>
+    <div class="flex items-center justify-between gap-2 mb-3">
+      <span class="text-[11px] font-mono uppercase tracking-wider text-cyan-400 font-semibold px-2 py-0.5 rounded bg-cyan-950/60 border border-cyan-800/40">
+        {post.data.category}
+      </span>
+      <time datetime={post.data.publishDate.toISOString()} class="text-[11px] font-mono text-slate-400">
+        {formattedDate}
+      </time>
+    </div>
+
+    <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-cyan-300 transition-colors leading-snug">
+      <a href={`/blog/${post.id}`} class="hover:underline">
+        {post.data.title}
+      </a>
+    </h3>
+
+    <p class="text-xs sm:text-sm text-slate-400 mt-2.5 line-clamp-2 leading-relaxed">
+      {post.data.description}
+    </p>
+  </div>
+
+  <div class="mt-4 pt-3 border-t border-slate-800/60 flex items-center justify-between">
+    <div class="flex flex-wrap gap-1.5">
+      {post.data.tags.slice(0, 3).map((tag) => (
+        <span class="text-[10px] font-mono text-slate-400">
+          #{tag}
+        </span>
+      ))}
+    </div>
+    <a
+      href={`/blog/${post.id}`}
+      class="inline-flex items-center gap-1 text-xs font-mono text-cyan-400 hover:text-cyan-300 font-medium group/link"
+    >
+      <span>Baca</span>
+      <svg class="w-3.5 h-3.5 transform group-hover/link:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+</article>

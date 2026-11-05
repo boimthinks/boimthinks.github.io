@@ -1,0 +1,28 @@
+# Boim Thinks — Personal Portfolio & Vibe Coding Knowledge Hub
+> Web personal Boim (@boimthinks), Software Developer & AI Agent Practitioner berdomisili di Palembang, Indonesia.
+
+## Core Specialization
+- Framework: Astro JS (SSR/SSG, Islands Architecture, Content Layer)
+- Vibe Coding Harness: OpenCode CLI & Agent Framework
+- Reasoning Models: Google Gemini, DeepSeek (R1 & V3)
+- Styling & Performance: Tailwind CSS v4, Zero-JS default, View Transitions
+- Architecture: Silo Hierarchy, Semantic Entity SEO, JSON-LD Schema.org
+
+## Live Production Portfolios
+- Laserindo Palembang (https://laserindopalembang.com): Jasa CNC laser cutting plat besi & stainless di Palembang.
+- Pireki Indonesia (https://pireki.id): Partisi geser kedap suara ballroom & ruang rapat.
+- Alfa Elektrindo (https://alfa.elektrindo.co.id): Komponen automasi industri & semikonduktor daya.
+- Lincah Travel (https://lincahtravel.web.id): Travel shuttle door-to-door & sewa mobil antar kota.
+- Sriwijaya Grafika (https://sriwijayagrafika.com): Digital printing, advertising & acrylic display Palembang.
+- Interior Batam (https://interiorbatam.web.id): Kontraktor desain interior komersial & residensial Batam.
+- Pagar Modern Palembang (https://pagarmodernpalembang.com): Pagar laser cutting minimalis modern & kanopi.
+- Partisi Ruang Rapat (https://partisiruangrapat.web.id): Pintu partisi lipat movable wall peredam suara kantor.
+
+## Technical Writings
+- Vibe Coding dan AI Agents dengan OpenCode: /blog/vibe-coding-ai-agents-opencode
+- Mengapa Astro JS Menjadi Fondasi Utama: /blog/astro-js-fondasi-web-modern
+
+## Contact & Profiles
+- GitHub: https://github.com/boimthinks
+- Email: boim.koe@gmail.com
+- Location: Palembang, Sumatera Selatan, Indonesia

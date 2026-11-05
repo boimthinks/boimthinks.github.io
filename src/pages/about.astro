@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Tentang Saya · Boim"
+  description="Profil Boim — Praktisi Vibe Coding, Developer Astro JS, dan Pembangun Ekosistem Web Berbasis AI Agent menggunakan OpenCode, Gemini & DeepSeek."
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12 md:py-20">
+    <!-- Header -->
+    <div class="mb-12 border-b border-slate-800/80 pb-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs font-mono mb-4">
+        <span>KNOW THE DEVELOPER</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+        Tentang Boim
+      </h1>
+      <p class="text-slate-400 mt-2 text-sm sm:text-base leading-relaxed">
+        Software developer, arsitek web modern, dan penikmat alur kerja kolaboratif bersama AI Agent.
+      </p>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="space-y-12">
+      <!-- Section 1: Siapa Saya -->
+      <section class="glow-card bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          <span>Perjalanan &amp; Filosofi</span>
+        </h2>
+        <div class="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+          <p>
+            Halo! Saya <strong>Boim</strong> (dikenal di dunia open-source dan komunitas sebagai <code>boimthinks</code>), berdomisili di <strong>Palembang, Indonesia</strong>. Saya fokus merancang website performa tinggi yang tidak hanya cepat diakses, tetapi juga memiliki arsitektur konten yang kaya (Silo &amp; Entity SEO) serta konversi bisnis nyata.
+          </p>
+          <p>
+            Bagi saya, pemrograman di era sekarang bukan lagi tentang menghafal sintaks atau mengetik ratusan baris boilerplate berulang kali. Paradigma telah bergeser ke arah <strong>vibe coding</strong>—di mana kejelasan konsep, ketajaman logika bisnis, dan instruksi presisi menjadi fondasi utama.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: Stack & Model AI -->
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Tools & Runtime -->
+        <div class="glow-card bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-2xl text-cyan-400">terminal</span>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Harness &amp; Tool: OpenCode</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4">
+            Alat tempur utama saya dalam mengeksekusi arsitektur kode. OpenCode memberikan fleksibilitas native di terminal Linux, kontrol file system yang ketat, dan kemampuan eksekusi subagent yang terukur.
+          </p>
+          <ul class="text-xs font-mono space-y-1.5 text-slate-300">
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-cyan-400 text-sm">check_circle</span> Konfigurasi terpusat AGENTS.md
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-cyan-400 text-sm">check_circle</span> Siklus evaluasi &amp; build otomatis
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-cyan-400 text-sm">check_circle</span> Integrasi CLI Linux native
+            </li>
+          </ul>
+        </div>
+
+        <!-- Models -->
+        <div class="glow-card bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center mb-4">
+            <span class="material-symbols-outlined text-2xl text-indigo-400">psychology</span>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Duet Model: Gemini &amp; DeepSeek</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4">
+            Dua model penalaran yang selalu menemani sesi koding saya:
+          </p>
+          <div class="space-y-3 text-xs leading-relaxed">
+            <div class="p-3 bg-slate-950/60 rounded-lg border border-slate-800/70">
+              <div class="font-bold text-blue-400 font-mono mb-1">Gemini (Google)</div>
+              <div class="text-slate-400">Kapasitas jendela konteks super luas, kecepatan inferensi instan, dan kemampuan sintesis data multimodal yang sangat akurat.</div>
+            </div>
+            <div class="p-3 bg-slate-950/60 rounded-lg border border-slate-800/70">
+              <div class="font-bold text-indigo-400 font-mono mb-1">DeepSeek (R1 &amp; V3)</div>
+              <div class="text-slate-400">Ketajaman logika komputasional, penalaran matematika mendalam, dan ketelitian audit arsitektur kode rumit.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Mengapa Astro JS -->
+      <section class="glow-card bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 sm:p-8">
+        <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          <span>Mengapa Selalu Memilih Astro JS?</span>
+        </h2>
+        <div class="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+          <p>
+            Seluruh proyek klien komersial saya—mulai dari manufaktur laser cutting, produsen partisi kedap suara, hingga platform travel—semuanya dibangun di atas <strong>Astro JS</strong>. Alasan utamanya sangat sederhana:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 font-mono text-xs">
+            <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+              <div class="text-cyan-400 font-bold mb-1">Speed &amp; Islands</div>
+              <div class="text-slate-400">Zero JS default menghasilkan skor Core Web Vitals mendekati 100 tanpa kompromi.</div>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+              <div class="text-cyan-400 font-bold mb-1">Content Collections</div>
+              <div class="text-slate-400">Struktur data Markdown type-safe dengan skema Zod yang anti-human error.</div>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
+              <div class="text-cyan-400 font-bold mb-1">ClientRouter</div>
+              <div class="text-slate-400">Perpindahan halaman mulus berkat View Transitions native modern.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Kontak & Kolaborasi -->
+      <section class="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-slate-900/90 to-slate-950 border border-cyan-500/30 text-center space-y-4">
+        <h3 class="text-xl font-bold text-white">Mari Berdiskusi atau Berkolaborasi</h3>
+        <p class="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
+          Tertarik mendiskusikan pengembangan web performa tinggi, arsitektur AI agent, atau proyek website bisnis Anda? Jangan ragu untuk terhubung.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2 font-mono text-xs">
+          <a
+            href="mailto:boim.koe@gmail.com"
+            class="px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold transition-colors"
+          >
+            boim.koe@gmail.com
+          </a>
+          <a
+            href="https://github.com/boimthinks"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 transition-colors"
+          >
+            GitHub: @boimthinks
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>

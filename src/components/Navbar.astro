@@ -1,0 +1,90 @@
+---
+const pathname = Astro.url.pathname;
+
+const navItems = [
+  { href: '/', label: 'Beranda' },
+  { href: '/about', label: 'Tentang' },
+  { href: '/portfolio', label: 'Portofolio' },
+  { href: '/blog', label: 'Blog' },
+];
+
+const isActive = (path: string) => {
+  if (path === '/' && pathname === '/') return true;
+  if (path !== '/' && pathname.startsWith(path)) return true;
+  return false;
+};
+---
+
+<header class="sticky top-0 z-50 w-full border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-md">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <!-- Brand -->
+    <a href="/" class="flex items-center gap-3 group">
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/30 border border-cyan-500/40 flex items-center justify-center p-1.5 transition-all duration-300 group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_rgba(6,182,212,0.4)]">
+        <img src="/icon.svg" alt="Boim Logo" class="w-full h-full object-contain filter invert opacity-90 group-hover:opacity-100" />
+      </div>
+      <div class="flex flex-col">
+        <span class="font-mono font-bold text-sm sm:text-base tracking-tight text-white group-hover:text-cyan-400 transition-colors">
+          boim<span class="text-cyan-400">.thinks</span>
+        </span>
+        <span class="text-[10px] text-slate-400 font-mono tracking-wider uppercase -mt-0.5">Vibe Coder</span>
+      </div>
+    </a>
+
+    <!-- Navigation links -->
+    <nav class="hidden md:flex items-center gap-1 bg-slate-900/60 border border-slate-800/90 rounded-full px-3 py-1 shadow-inner">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class:list={[
+            'px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wide transition-all duration-200',
+            isActive(item.href)
+              ? 'bg-cyan-500/15 text-cyan-400 border border-cyan-500/30 shadow-[0_0_10px_rgba(6,182,212,0.2)]'
+              : 'text-slate-300 hover:text-white hover:bg-slate-800/50'
+          ]}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <!-- Right Action & Status -->
+    <div class="flex items-center gap-3">
+      <div class="hidden sm:flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-950/40 border border-emerald-500/30 text-emerald-400 text-[11px] font-mono">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span>OpenCode Active</span>
+      </div>
+
+      <a
+        href="https://github.com/boimthinks"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub Profile"
+        class="p-2 rounded-lg border border-slate-800 bg-slate-900/70 text-slate-400 hover:text-white hover:border-slate-700 transition-colors"
+      >
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Mobile bottom nav strip -->
+  <div class="md:hidden border-t border-slate-900 bg-slate-950/90 px-4 py-2 flex items-center justify-around text-xs">
+    {navItems.map((item) => (
+      <a
+        href={item.href}
+        class:list={[
+          'px-2.5 py-1 rounded-md font-medium transition-colors',
+          isActive(item.href)
+            ? 'text-cyan-400 font-semibold'
+            : 'text-slate-400 hover:text-white'
+        ]}
+      >
+        {item.label}
+      </a>
+    ))}
+  </div>
+</header>
